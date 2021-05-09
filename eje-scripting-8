@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if read -t 5 -p "What's your name: " name; then
+
+	echo "Hi $name, how are you?"
+
+else
+
+	echo "You took much time!"
+
+fi
