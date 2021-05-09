@@ -1,0 +1,6 @@
+
+#!/bin/bash
+
+read -p "What's your name: " first last
+
+echo "Your data for $last, $first…"
