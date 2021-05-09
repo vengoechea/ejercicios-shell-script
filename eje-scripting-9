@@ -1,0 +1,5 @@
+!/bin/bash
+
+read -s -p "Enter password: " mypass
+
+echo "Your password is $mypass? "
