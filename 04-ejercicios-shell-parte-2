@@ -1,0 +1,39 @@
+#! /bin/bash
+echo "Introduce un número"
+read n
+if [ $n -gt "0" ];then
+echo "Ud. ha introducido un número positivo"
+else
+if [ $n -lt "0" ];then
+echo "Ud. ha introducido un número negativo"
+else
+echo "Ud. ha introducido el número 0"
+fi
+fi
+
+--  OTRA FORMA --
+clear
+echo "INTRODUCE UN MÚMERO"
+read numero
+if [ $numero -gt 0 ];then
+echo "EL NÚMERO $numero ES POSITIVO"
+elif [ $numero -lt 0 ];then
+echo "EL NÚMERO $numero ES NEGATIVO"
+else 
+echo "EL NUMERO ES O"
+fi
+
+
+--  OTRA FORMA --
+clear
+echo "INTRODUCE UN MÚMERO"
+read numero
+if [ $numero -gt 0 ];then
+echo "EL NÚMERO $numero ES POSITIVO"
+else
+        if [ $numero -lt 0 ];then
+        echo "EL NÚMERO $numero ES NEGATIVO"
+        else 
+        echo "EL NUMERO ES O"
+        fi
+fi
