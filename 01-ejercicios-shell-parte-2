@@ -1,0 +1,17 @@
+#! /bin/bash
+echo "Introduce un número"
+read n
+if [ $n -gt "0" ];then
+echo "Este número es positivo"
+fi
+
+-- OTRA FORMA –-
+clear
+echo "INTRODUCE UN NUMERO"
+read numero
+if [ $numero -gt 0 ]
+then
+echo "El numero $numero es positivo"
+else
+echo "el numero $numero es negativo"
+fi
