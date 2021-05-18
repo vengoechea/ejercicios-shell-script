@@ -1,0 +1,12 @@
+#! /bin/bash 
+# $? is the return code from the last run process. 0 means no error happened. Other values represent some kind of unusual condition.
+
+# With above example you may observe that first two expressions have at least one true value, hence returns true value. But in last both expressions are false, hence returns false value
+
+[ 4 -le 5 ] || [ 5 -le 7 ]; echo $?
+
+[ 6 -le 5 ] || [ 5 -le 7 ]; echo $?
+
+[ 4 -le 5 ] || [ 8 -le 7 ]; echo $?
+
+[ 6 -le 5 ] || [ 8 -le 7 ]; echo $?
