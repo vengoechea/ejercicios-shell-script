@@ -1,0 +1,7 @@
+#! /bin/bash
+
+echo "Introduce un número"
+read n
+if [ $n -lt "0" ];then
+echo "Este número es negativo"
+fi
