@@ -1,0 +1,18 @@
+#! /bin/bash
+echo "Introduce un número"
+read n
+if [ $n -eq "0" ];then
+echo "Ud. ha introducido el número 0"
+fi
+
+-- OTRA FORMA –
+
+clear
+echo "INTRODUCE UN NÚMERO"
+read numero
+if [ $numero -eq 0 ]
+then
+echo "El número que has tecleado es 0"
+else
+echo "El número: $numero es distinto de 0"
+fi
