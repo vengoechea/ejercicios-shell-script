@@ -1,0 +1,24 @@
+#! /bin/bash
+clear
+if [ $# -eq 2 ]
+then
+expr $1 + $2
+else "El número de parámetros introducidos no es dos"
+fi
+
+--  OTRA FORMA --
+clear
+if [ $# -eq 2 ]
+then
+suma=`expr $1 + $2`
+echo "La suma de los parámetros es: $suma"
+else "El número de parámetros introducidos no es 2 sino $#"
+fi
+
+--  OTRA FORMA --
+if [ $# -eq "2" ]; then
+suma=$(($1 + $2))
+echo $suma
+else 
+echo "Número de parámetros introducidos incorrecto"
+fi
