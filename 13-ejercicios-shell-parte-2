@@ -1,0 +1,13 @@
+#! /bin/bash
+clear
+for ((i=1;i<=$1;i++))
+do
+echo $i HOLA
+
+done
+
+-- OTRA FORMA --
+
+for i in $(seq 1 $1);do
+echo "hola"
+done
