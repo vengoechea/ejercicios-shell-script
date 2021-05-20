@@ -1,0 +1,72 @@
+#! /bin/bash
+echo "Introduce una ruta"
+read n
+if [ -e $n ];then
+	if [ -r $n ];then
+	echo "El archivo tiene permisos de lectura"
+	fi
+	if [ -w $n ];then
+	echo "El archivo tiene permisos de escritura"
+	fi
+	if [ -x $n ];then
+	echo "El archivo tiene permisos de ejecución"
+	fi
+else
+echo "La ruta no existe"
+fi
+
+
+-- OTRA FORMA –
+
+clear
+if [ -e $1 ]
+then
+    if [ -d $1 ]
+    then
+        echo EL DIRECTORIO $1 TIENE PERMISOS DE:
+        if [ -r $1 ];then echo lectura
+        fi
+        if [ -w $1 ];then echo escritura
+        fi
+        if [ -x $1 ];then echo ejecución
+        fi
+     else
+           if [ -f $1 ]
+           then
+               echo EL FICHERO $1 TIENE PERMISOS DE:
+               if [ -r $1 ];then echo  lectura
+               fi
+               if [ -w $1 ];then echo  escritura
+               fi
+               if [ -x $1 ];then echo  ejecución
+               fi
+           fi
+    fi
+else
+echo TRONK HAS INTRODUCIDO UN ARCHIVO/DIRECTORIO NO EXISTENTE EN LA RUTA
+fi
+
+-- OTRA FORMA –
+
+clear
+if [ -e $1 ]
+then
+    if [ -f $1 ]
+    then
+    tipo="archivo"
+    else
+       if [ -d $1 ]
+       then
+       tipo="directorio"
+       fi
+    fi
+
+    echo El "$tipo" tiene permisos de:
+    if [ -r $1 ];then echo lectura
+    fi
+    if [ -w $1 ];then echo escritura
+    fi
+    if [ -x $1 ];then echo ejecucion
+    fi
+else echo el fichero/archivo no existe en la ruta
+fi
