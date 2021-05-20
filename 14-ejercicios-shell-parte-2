@@ -1,0 +1,14 @@
+#! /bin/bash
+clear
+for ((i=0;i<=$1;i++))
+do
+echo $i
+done
+
+-- OTRA FORMA --
+a=0
+echo $a
+for i in $(seq 1 $1)
+do
+echo $i
+done
