@@ -1,0 +1,32 @@
+#! /bin/bash
+echo "Introduce la ruta a examinar"
+read n
+if [ -d $n ];then
+echo "La ruta pertenece a un directorio"
+fi
+if [ -f $n ];then
+echo "La ruta pertenece a un fichero"
+fi
+
+-- OTRA FORMA --     
+clear
+if [ -d $1 ];then
+echo "$1 es un directorio"
+elif [ -f $1 ];then
+echo "$1 es un fichero"
+else
+echo "No existe"
+fi
+
+-- OTRA FORMA –
+
+clear
+if [ -d $1 ];then
+echo "$1 es un directorio"
+else
+    if [ -f $1 ];then
+    echo "$1 es un fichero"
+    fi
+else
+echo "No existe"
+fi
