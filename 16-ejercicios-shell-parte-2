@@ -1,0 +1,21 @@
+#! /bin/bash
+clear
+echo El valor del primer parámetro es: $1
+echo El valor del segundo parámetro es: $2
+echo Ahora
+sleep 2
+set $2 $1
+echo El valor del primer parámetro es: $1
+echo El valor del segundo parámetro es: $2
+
+-- OTRA FORMA --
+
+NUM1=$1
+NUM2=$2
+echo "Valor del parámetro 1: $NUM1"
+echo "Valor del parámetro 2: $NUM2"
+N=$NUM1
+NUM1=$NUM2
+NUM2=$N
+echo "Cambio del parámetro 1: $NUM1"
+echo "Cambio del parámetro 2: $NUM2"
