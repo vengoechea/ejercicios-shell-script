@@ -1,0 +1,72 @@
+#! /bin/bash
+if [ $# -eq "3" ]; then
+	if [ $3 = "+" ]; then
+	echo "la suma es:" $(($1 + $2))
+	else
+		if [ $3 = "-" ];then
+		echo "la resta es:" $(($1 - $2))
+		else
+			if [ $3 = "x" ];then
+			echo "la multiplicación es:" $(($1 * $2))
+			else
+				if [ $3 = "/" ];then
+				echo "la división es:" $(($1 / $2))
+				else
+				echo "El tercer parámetro no es +, -, x o /"
+				fi
+			fi
+
+		fi
+	fi
+else
+echo "Número de parámetros introducidos incorrecto"
+fi
+
+-- OTRA FORMA --
+clear
+if [ $# -eq 3 ]
+then
+    if [ $3 = + ];then
+    expr $1 + $2
+    fi
+    if [ $3 = - ];then
+    expr $1 - $2
+    fi
+    if [ $3 = / ];then
+    expr $1 / $2
+    fi
+    if [ $3 = x ];then
+    expr $1 "*" $2
+    fi
+else
+echo el numero de parámetros introducidos no es 3, sino $#
+fi
+
+-- OTRA FORMA –
+clear
+if [ $# -eq 3 ]
+then
+    cadena="+-/x"
+    echo $cadena > aux
+    grep $3 aux  #para que no se muestre el grep
+    if [ $? = 0 ];then
+       case $3 in
+       +)
+       expr $1 + $2
+       ;;
+       -)
+       expr $1 - $2
+       ;;
+       /)
+       expr $1 / $2
+       ;;
+       x)
+       expr $1 "*" $2
+       ;;
+       esac
+       else
+       echo "DEBES INGRESAR +,-,/,x"
+    fi
+else
+echo el numero de parámetros introducidos no es 3, sino $#
+fi
