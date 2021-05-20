@@ -1,0 +1,20 @@
+#! /bin/bash
+echo "Introduce la ruta de un fichero"
+read n
+if [ -e $n ];then
+echo "El fichero existe"
+else
+echo "El fichero no existe"
+fi
+
+-- OTRA FORMA –
+
+clear
+echo INTRODUCE EL NOMBRE DEL FICHERO Y SU RUTA
+read "fichero"
+if test -e "$fichero"
+then
+cat "$fichero"
+else
+echo el fichero no existe
+fi
