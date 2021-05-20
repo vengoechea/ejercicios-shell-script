@@ -1,0 +1,23 @@
+clear
+
+for ((i=0;i<=50;i++))
+do
+echo $i hola
+
+done
+
+-- OTRA FORMA –-
+
+a=hola
+for i in $(seq 1 50);
+do
+echo $a
+done
+
+-- OTRA FORMA –-
+i=0
+while ( $i –lt 50)
+do
+  echo hola
+  i = `expr $i + 1`
+done
