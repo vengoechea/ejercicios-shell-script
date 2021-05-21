@@ -1,0 +1,50 @@
+#! /bin/bash
+echo ¿Vas a viajar ida y vuelta? Responde SI o NO
+read n
+case $n in
+
+SI|Si|si|s)
+resultado=`expr \( 30 + 30 \) \* 80 / 100`
+echo $resultado
+;;
+NO|No|no|n)
+echo Tienes que pagar 30€
+;;
+*)
+echo Opción no válida
+;;
+esac
+
+-- OTRA FORMA --
+
+
+echo ¿Vas a viajar ida y vuelta? Responde SI o NO
+read n
+case $n in
+
+SI|Si|si|s)
+expr \( 30 + 30 \) \* 80 / 100
+
+;;
+NO|No|no|n)
+echo Tienes que pagar 30€
+;;
+*)
+echo Opción no válida
+;;
+esac
+
+
+-- OTRA FORMA --
+
+echo "¿Ida y vuelta?, Responde SI o NO"
+read n
+if [ $n = SI ] || [ $n = si ] || [ $n = s ]
+then
+suma=$((30+30))
+descuento=`expr $suma \* 80 / 100`
+echo Tiene que pagar: $descuento
+else
+echo Tiene que pagar 30€
+
+fi
