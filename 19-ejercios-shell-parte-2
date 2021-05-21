@@ -1,0 +1,27 @@
+#! /bin/bash
+clear
+echo >fichero
+echo Escribe una palabra
+read palabra
+while [ $palabra != :q ]
+do
+ echo $palabra >> fichero
+ sort -o fichero fichero
+ echo Escribe otra palabra:
+read palabra
+
+done
+
+-- OTRA FORMA --
+
+echo "Escribe una palabra: "
+read n
+while [ $n != ":q" ]
+do
+touch fichero
+echo $n >> fichero
+sort -d fichero > tmp
+mv tmp fichero
+echo "Escriba otra palabra: "
+read n
+done
