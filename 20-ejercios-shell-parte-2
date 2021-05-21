@@ -1,0 +1,12 @@
+#! /bin/bash
+read numero
+for i in `cat numeros`
+do
+  if [ $i -eq $numero ]
+  then
+        echo "El número $numero existe en el fichero"
+        exit 0
+  fi
+done
+echo "El número $numero no se encuentra en el fichero"
+
